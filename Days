@@ -1,0 +1,15 @@
+
+//Write a code snippet to find the date that is 10 days from today using a date and time API.
+import java.time.*;
+public class tendays
+    {
+        public static void main(String[] args)
+        {
+            LocalDate today = LocalDate.now();
+            System.out.println("Today : " + today);
+            LocalDate tom = today.plusDays(10);
+            System.out.println(tom);
+        }
+    }
+
+
