@@ -1,0 +1,17 @@
+import java.time.*;
+import java.time.temporal.ChronoUnit;
+
+//How can you calculate the number of days between two dates using a date and time API?
+class no_of_days
+{
+   public static void main(String[]args)
+   {
+       LocalDateTime starting = LocalDateTime.of(2024,8,16,23,17);
+       LocalDateTime ending = LocalDateTime.of(2024,8,19,23,17);
+
+       long daysBetween = ChronoUnit.DAYS.between(starting, ending);
+
+       System.out.println("Days :"+daysBetween);
+ 
+   }
+}
