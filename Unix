@@ -1,0 +1,22 @@
+//Write a code snippet to convert the current date and time to a Unix timestamp using a date and time API.
+
+import java.time.*;
+import java.time.Instant;
+
+class unix
+{
+        public static void main(String[] args)
+        {
+            long currentTimestamp = Instant.now().getEpochSecond();
+            System.out.println(currentTimestamp);
+
+            LocalDateTime now  = LocalDateTime.now();
+            System.out.println("LocalDateTime"+now);
+
+            ZonedDateTime zonedDateTime = now.atZone(ZoneId.systemDefault());
+            System.out.println("ZonedDateTime" + zonedDateTime);
+            long currentTimestamp1 = zonedDateTime.toEpochSecond();
+            System.out.println("Current Unix Timestamp: " + currentTimestamp);
+        }
+
+}
