@@ -1,0 +1,20 @@
+
+//How can you localize a date to a specific locale (e.g., display the date in French) using a date and time API?
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+public class french {
+    public static void main(String[] args) {
+
+        LocalDate currentDate = LocalDate.now();
+
+        Locale frenchLocale = Locale.FRANCE;
+
+        DateTimeFormatter frenchFormatter = DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy", frenchLocale);
+
+        String formattedDate = currentDate.format(frenchFormatter);
+
+        System.out.println("Formatted date in French: " + formattedDate);
+    }
+}
